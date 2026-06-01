@@ -1,0 +1,25 @@
+{
+    "name": "yandex-map-tabular-manager",
+    "version": "1.0.0",
+    "description": "Tabular manager for Yandex Map markers with ColorPicker",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "node esbuild.config.js",
+        "watch": "node esbuild.config.js --watch",
+        "clean": "rm -rf dist"
+    },
+    "keywords": [
+        "yandex-map",
+        "tabular",
+        "colorpicker",
+        "typescript"
+    ],
+    "author": "Your Name",
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "esbuild": "^0.25.4",
+        "sass": "^1.83.4",
+        "typescript": "^5.7.3"
+    }
+}
