@@ -13,7 +13,8 @@
   "minimum-stability": "stable",
   "extra": {
     "moduleClass": "Besnovatyj\\YandexMap\\Module",
-    "moduleId": "YandexMap"
+    "moduleId": "YandexMap",
+    "bescms": { "kind": "module" }
   },
   "keywords": [
     "yii2",
