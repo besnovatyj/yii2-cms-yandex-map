@@ -7,7 +7,7 @@
 
 namespace Besnovatyj\YandexMap\migrations;
 
-use common\components\migration\BaseMigration;
+use Besnovatyj\Kernel\migration\BaseMigration;
 
 /** 'm<YYMMDD_HHMMSS>_<Name>' */
 class m241027_163300_create_yandex_map_maps_table extends BaseMigration
