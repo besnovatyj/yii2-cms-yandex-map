@@ -8,7 +8,7 @@
 namespace Besnovatyj\YandexMap\controllers\backend;
 
 
-use common\components\controller\ControllerTrait;
+use Besnovatyj\Kernel\controller\ControllerTrait;
 use DomainException;
 use Besnovatyj\YandexMap\forms\backend\MapForm;
 use Besnovatyj\YandexMap\forms\backend\search\MapSearch;
