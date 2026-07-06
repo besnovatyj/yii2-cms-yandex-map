@@ -6,7 +6,7 @@
  */
 
 use Besnovatyj\Backend\Widgets\grid\ActionColumn;
-use modules\user\components\Helper;
+use Besnovatyj\User\components\Helper;
 use Besnovatyj\YandexMap\entities\Map;
 use Besnovatyj\YandexMap\forms\backend\search\MapSearch;
 use Besnovatyj\Backend\Widgets\pagination\LinkPager;
