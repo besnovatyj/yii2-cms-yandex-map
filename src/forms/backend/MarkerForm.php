@@ -18,7 +18,7 @@ class MarkerForm extends Model
     public string $title = '';
     public string $subTitle = '';
 
-    public function __construct(Marker $marker = null, $config = [])
+    public function __construct(?Marker $marker = null, $config = [])
     {
         if ($marker) {
             $this->latitude = $marker->getLatitude();

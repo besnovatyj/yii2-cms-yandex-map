@@ -17,7 +17,7 @@ class LocationForm extends BaseForm
     public float $longitude = 0.000000;
     public int $zoom = 1;
 
-    public function __construct(Location $location = null, $config = [])
+    public function __construct(?Location $location = null, $config = [])
     {
         if ($location) {
             $this->latitude = $location->getLatitude();

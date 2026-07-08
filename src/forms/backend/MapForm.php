@@ -20,7 +20,7 @@ class MapForm extends CompositeForm
     public $name;
     public $cssClass;
 
-    public function __construct(Map $map = null, $config = [])
+    public function __construct(?Map $map = null, $config = [])
     {
         if ($map) {
             $this->name = $map->name;
