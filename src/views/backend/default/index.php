@@ -6,7 +6,7 @@
  */
 
 use Besnovatyj\Backend\Widgets\grid\ActionColumn;
-use Besnovatyj\User\components\Helper;
+use Besnovatyj\Kernel\security\AccessHelper;
 use Besnovatyj\YandexMap\entities\Map;
 use Besnovatyj\YandexMap\forms\backend\search\MapSearch;
 use Besnovatyj\Backend\Widgets\pagination\LinkPager;
@@ -55,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'format' => 'raw',
                 ],
                 ['class' => ActionColumn::class,
-                    'template' => Helper::filterActionColumn(['view', 'update', 'delete',]),
+                    'template' => AccessHelper::filterActionColumn(['view', 'update', 'delete',]),
                 ],
             ],
         ]); ?>
