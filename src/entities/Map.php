@@ -15,6 +15,7 @@ use yii\db\ActiveRecord;
  * @property int $id
  * @property string $name
  * @property string $cssClass
+ * @property string $placeholder URL изображения-плейсхолдера, показываемого до загрузки карты
  *
  * @property Marker[] $markers
  * @property Location $location
@@ -26,18 +27,20 @@ class Map extends ActiveRecord
     private Location $location;
     private array $markers = [];
 
-    public static function create(string $name, string $cssClass): self
+    public static function create(string $name, string $cssClass, string $placeholder): self
     {
         $map = new static();
         $map->name = $name;
         $map->cssClass = $cssClass;
+        $map->placeholder = $placeholder;
         return $map;
     }
 
-    public function edit(string $name, string $cssClass): void
+    public function edit(string $name, string $cssClass, string $placeholder): void
     {
         $this->name = $name;
         $this->cssClass = $cssClass;
+        $this->placeholder = $placeholder;
     }
 
     public function setLocation($latitude, $longitude, $zoom): void

@@ -5,8 +5,11 @@
 .yandex-map {
     width: 100%;
     padding: 0;
-    background-image: url(/static_assets_bd/images/custom/ymap.jpg);
+    /* Изображение-плейсхолдер задаётся индивидуально для каждой карты
+       через inline-стиль background-image в YandexMapWidget (поле Map::$placeholder) */
     background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .yandex-map.h-300 {

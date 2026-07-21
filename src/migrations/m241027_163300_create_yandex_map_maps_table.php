@@ -28,32 +28,14 @@ class m241027_163300_create_yandex_map_maps_table extends BaseMigration
                 ->comment('Название карты'),
             'cssClass' => $this->string(255)->null()
                 ->comment('Стили для главного тега карты'),
+            'placeholder' => $this->string(255)->null()->defaultValue('')
+                ->comment('URL изображения-плейсхолдера, показываемого до загрузки карты'),
             'location_json' => $this->text()->notNull()
                 ->comment('JSON of Location'),
             'markers_json' => $this->text()->notNull()
                 ->comment('JSON of Markers'),
         ], $this->tableOptions);
         $this->addCommentOnTable(static::TABLE_NAME, 'Яндекс карты');
-
-        $this->batchInsert(static::TABLE_NAME,
-            ['id', 'name', 'cssClass', 'location_json', 'markers_json'],
-            [
-                [
-                    '1',
-                    'МАУК "БДТ"',
-                    '',
-                    '{"latitude":59.403648,"longitude":56.811722,"zoom":15}',
-                    '[{"latitude":59.403648,"longitude":56.811722,"color":"#A52A2A","title":"МАУК \\"БДТ\\"","subTitle":""}]',
-                ],
-                [
-                    '2',
-                    'МАУК "БДТ" 2',
-                    '',
-                    '{"latitude":59.403648,"longitude":56.811722,"zoom":15}',
-                    '[{"latitude":59.403648,"longitude":56.811722,"color":"#A52A2A","title":"МАУК \"БДТ\"","subTitle":""}]',
-                ],
-            ]
-        );
 
         parent::safeUp();
     }

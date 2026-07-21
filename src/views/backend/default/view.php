@@ -44,6 +44,7 @@ $url = 'https://yandex.ru/maps/?ll=' . $map->location->getLongitude() . ',' . $m
             'attributes' => [
                 'id',
                 'cssClass',
+                'placeholder',
                 [
                     'attribute' => 'latitude',
                     'value' => $map->location->getLatitude(),

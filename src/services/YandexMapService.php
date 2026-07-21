@@ -32,6 +32,7 @@ class YandexMapService
         $map = Map::create(
             $form->name,
             $form->cssClass,
+            $form->placeholder,
         );
 
         $map->setLocation(
@@ -57,6 +58,7 @@ class YandexMapService
         $map->edit(
             $form->name,
             $form->cssClass,
+            $form->placeholder,
         );
 
         $map->setLocation(

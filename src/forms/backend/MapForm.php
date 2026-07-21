@@ -19,12 +19,14 @@ class MapForm extends CompositeForm
 {
     public $name;
     public $cssClass;
+    public $placeholder;
 
     public function __construct(?Map $map = null, $config = [])
     {
         if ($map) {
             $this->name = $map->name;
             $this->cssClass = $map->cssClass;
+            $this->placeholder = $map->placeholder;
             $this->markers = array_map(static function (Marker $marker) {
                 return new MarkerForm($marker);
             }, $map->markers);
@@ -67,7 +69,7 @@ class MapForm extends CompositeForm
     {
         return [
             [['name',], 'required'],
-            [['name', 'cssClass',], 'string', 'max' => 255],
+            [['name', 'cssClass', 'placeholder',], 'string', 'max' => 255],
         ];
     }
 

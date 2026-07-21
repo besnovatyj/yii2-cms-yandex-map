@@ -33,6 +33,8 @@ Assets::register($this);
                     <div class="card-body">
                         <?= $form->field($model, 'name')->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
                         <?= $form->field($model, 'cssClass')->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
+                        <?= $form->field($model, 'placeholder')->textInput(['maxlength' => true, 'class' => 'form-control'])
+                            ->hint('URL изображения-заглушки, показываемого до загрузки карты (при наведении/тапе). Пусто — без заглушки.') ?>
                     </div>
                     <div class="card-footer"></div>
                 </div>

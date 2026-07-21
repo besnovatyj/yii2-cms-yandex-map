@@ -1,6 +1,5 @@
 <?php
 
-
 /*
  * Copyright (c) 2026 Besnovatyj. Licensed under the MIT License.
  */
@@ -12,6 +11,7 @@ use Besnovatyj\Helpers\json\Json;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\base\Widget;
+use yii\helpers\Html;
 
 /**
  * Виджет Яндекс карт
@@ -44,40 +44,11 @@ class YandexMapWidget extends Widget
         $markers = Json::encode($map->getMarkersFormatted());
         $location = Json::encode($map->getLocationFormatted());
 
-        return '<div class="yandex-map h-300 ' . $map->cssClass . '" data-markers=\'' . $markers . '\' data-location=\'' . $location . '\'></div>';
+        $style = $map->placeholder !== null && $map->placeholder !== ''
+            ? ' style="background-image: url(\'' . Html::encode($map->placeholder) . '\')"'
+            : '';
+
+        return '<div class="yandex-map h-300 ' . $map->cssClass . '" data-markers=\'' . $markers . '\' data-location=\'' . $location . '\'' . $style . '></div>';
     }
-
-    //START============================================
-    //for shortcodes module
-
-    /**
-     * Content inner shortcode
-     * ```
-     * [code]...content here...[\code]
-     * ```
-     * @var string
-     */
-    public string $content;
-
-    /**
-     * @param string $name
-     * @param mixed $string
-     */
-    public function __set($name, $string)
-    {
-        if (property_exists($this, $name)) {
-            $this->$name = $string;
-        }
-    }
-
-    //END============================================
 
 }
-
-// TODO Сделать возможным задавать расположение картинки
-//.yandex-map {
-//    width: 100%;
-//    padding: 0;
-//    background-image: url(/static_assets_bd/images/custom/ymap.jpg);
-//    background-position: center center;
-//}

@@ -9,7 +9,6 @@ return [
     'params' => [
         'iconClass' => 'bi bi-pin-map',
 
-        'directories' => false, // Если для работы модуля необходимы директории для статики
         'yandexApiKey' => '',
     ],
 ];
