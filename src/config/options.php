@@ -9,7 +9,7 @@ return [
     'yandex_api_key' => [
         'path' => 'modules.YandexMap.params.yandexApiKey',
         'label' => 'Yandex JavaScript API Key',
-        'description' => "Yii::\$app->getModule('yandexMap')->params['yandexApiKey'] (<a target=\"_blank\" href=\"https://developer.tech.yandex.ru/services/3\">Список ключей</a>)",
+        'description' => "Yii::\$app->getModule('yandexMap')->params['yandexApiKey'] (<a target=\"_blank\" href=\"https://developer.tech.yandex.ru/keys?modern=true\">Список ключей</a>)",
         'group' => '',
         'category' => 'YandexMap',
         'rules' => [
